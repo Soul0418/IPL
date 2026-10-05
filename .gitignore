@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Anaconda
+.anaconda/
+.conda/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Python / Jupyter temporary files
+*.log
+*.tmp
+
+# Large model/data files
+*.joblib
+*.pkl
+*.pickle
+
+# Raw datasets
+data/raw/
+
+# Secrets / environment variables
+.env
+.env.*
+
+# Temporary outputs
+*.bak
+*.swp
