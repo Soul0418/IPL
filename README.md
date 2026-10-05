@@ -1,70 +1,63 @@
-# 🏏 IPL Player Auction Intelligence & Valuation System
+@'
+# IPL Player Auction Intelligence & Valuation System
 
-An end-to-end machine learning project that estimates the potential auction value of IPL players using only information that would have been available before the auction.
+An end-to-end machine learning project that estimates IPL player auction valuations using only information that would have been available before the auction.
 
-The project combines historical IPL auction data with season-level batting and bowling performance to build a time-aware player valuation system.
+The system combines historical IPL auction records with season-level batting and bowling performance to create a time-aware player valuation framework.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-IPL auction prices are influenced by player performance, experience, previous auction history, role, nationality, and market demand.
+IPL auction prices are influenced by many factors including recent performance, career statistics, experience, previous auction history, player role, nationality, and market conditions.
 
-The goal of this project was to answer:
+This project asks:
 
-> **"Based on everything known about a player before an auction, what could their potential auction valuation be?"**
+> **Based on everything known about a player before an auction, what could their potential auction valuation be?**
 
 The system performs:
 
 - Player identity resolution across multiple datasets
 - Data cleaning and preprocessing
-- Historical performance aggregation
+- Historical batting and bowling aggregation
 - Pre-auction feature engineering
-- Temporal data splitting
+- Data leakage prevention
+- Temporal model evaluation
 - Machine learning model comparison
 - Feature importance analysis
 - Prediction error analysis
-- Player valuation generation
+- Interactive player valuation
 
-The final system can take a player's:
-
-- Name
-- Auction year
-- Role
-- Nationality
-
-and generate an estimated auction value along with an empirical valuation range.
+The final system can take a player's name, auction year, role, and nationality and generate an estimated auction value with an empirical valuation range.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
-The project was designed to:
-
-1. Combine IPL auction and player performance datasets.
-2. Resolve inconsistent player names across datasets.
-3. Create historical player performance features.
-4. Ensure that only information available before an auction is used.
-5. Train machine learning regression models.
-6. Compare model performance using a future-year test set.
-7. Identify the features most associated with auction valuation.
-8. Analyze where the model performs well and where it struggles.
+1. Combine historical IPL auction and player-performance datasets.
+2. Resolve inconsistent player names across different datasets.
+3. Build season-level batting and bowling performance histories.
+4. Generate features using only information available before each auction.
+5. Train machine learning regression models for auction valuation.
+6. Evaluate models using a future-year temporal holdout.
+7. Identify the most influential feature groups.
+8. Analyze prediction errors and model limitations.
 9. Build an interpretable player valuation system.
 
 ---
 
-## 📊 Dataset
+## Dataset
 
-The project uses three major data sources:
+The project combines four main categories of information.
 
 ### Player Data
 
-Contains player-level information such as:
+Player-level information including:
 
 - Player name
 - Country
 - Debut year
-- Last year
+- Last active year
 - Seasons played
 - Career statistics
 
@@ -73,7 +66,7 @@ Contains player-level information such as:
 Season-level batting statistics including:
 
 - Innings
-- Runs
+- Runs scored
 - Balls faced
 - Batting strike rate
 - Hundreds
@@ -106,22 +99,22 @@ Auction-level information including:
 - Team
 - Auction status
 
+Raw datasets are not committed to the repository. See [`data/README.md`](data/README.md) for details.
+
 ---
 
-## 🧹 Data Cleaning & Entity Resolution
+## Data Cleaning & Player Identity Resolution
 
-One of the major challenges was inconsistent player naming across datasets.
+A major challenge was that the same player could appear under different names across datasets.
 
-The same player could appear with:
-
-- Initials
-- Abbreviated names
-- Different spacing
-- Different punctuation
-- Alternative naming conventions
-
-For example:
+Examples include:
 
 ```text
 K L Rahul
 KL Rahul
+
+M Shahrukh Khan
+Shahrukh Khan
+
+D L Chahar
+Deepak Chahar
