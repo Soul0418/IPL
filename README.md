@@ -1,5 +1,11 @@
 # 🏏 IPL Player Auction Intelligence & Valuation System
 
+## 🚀 Live Demo
+
+🔗 **[Try the IPL Auction Analysis Dashboard](https://iplauctionanalysis.streamlit.app/)**
+
+> Explore IPL player auction valuations, historical auction intelligence, performance insights, and ML-powered price predictions.
+
 An end-to-end **Machine Learning project** that analyzes IPL player performance and historical auction data to estimate a player's potential auction value.
 
 The project transforms historical IPL auction records, batting performance, bowling performance, player experience, and previous auction prices into a structured player valuation framework.
