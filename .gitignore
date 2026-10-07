@@ -1,10 +1,10 @@
+# ============================================================
 # Python
+# ============================================================
+
 __pycache__/
 *.py[cod]
-*.pyo
-
-# Jupyter
-.ipynb_checkpoints/
+*$py.class
 
 # Virtual environments
 .venv/
@@ -12,35 +12,72 @@ venv/
 env/
 ENV/
 
-# Anaconda
-.anaconda/
-.conda/
+# Jupyter
+.ipynb_checkpoints/
+
+
+# ============================================================
+# IDE / Editor
+# ============================================================
+
+.vscode/
+.idea/
 
 # OS files
 .DS_Store
 Thumbs.db
-desktop.ini
 
-# IDE
-.vscode/
-.idea/
 
-# Python / Jupyter temporary files
-*.log
-*.tmp
+# ============================================================
+# Python / ML generated files
+# ============================================================
 
-# Large model/data files
 *.joblib
 *.pkl
 *.pickle
 
-# Raw datasets
-data/raw/
+# Logs
+*.log
 
-# Secrets / environment variables
+
+# ============================================================
+# Streamlit
+# ============================================================
+
+.streamlit/secrets.toml
+
+
+# ============================================================
+# Temporary / generated files
+# ============================================================
+
+*.tmp
+*.temp
+
+# Keep output figures tracked
+# outputs/figures/
+
+
+# ============================================================
+# Large raw data / archives
+# ============================================================
+
+*.zip
+
+# Raw source archives
+data/raw/**/archive.zip
+
+
+# ============================================================
+# Local environment / system files
+# ============================================================
+
 .env
 .env.*
+!.env.example
 
-# Temporary outputs
-*.bak
-*.swp
+# ============================================================
+# Raw datasets
+# ============================================================
+
+data/raw/
