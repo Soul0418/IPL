@@ -33,6 +33,7 @@ Thumbs.db
 # ============================================================
 
 *.joblib
+!notebooks/ipl_auction_master_snapshot.joblib
 *.pkl
 *.pickle
 
